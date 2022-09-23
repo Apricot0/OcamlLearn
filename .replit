@@ -1,0 +1,4 @@
+run = "ocaml -init bin/main.ml"
+
+[nix]
+channel = "stable-21_11"
