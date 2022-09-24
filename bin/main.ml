@@ -17,5 +17,15 @@ let rec compress list = match list with
 (*Q3*)
 let rec remove_if list condition = match list with
   | [] -> []
-  | a::t -> if condition a then remove_if t condition else a:: remove_if t condition;;
+  | a::t -> 
+      if condition a then remove_if t condition 
+      else a:: remove_if t condition;;
+(*Q4*)
+let rec slice list i j = match list with
+  | [] -> []
+  | a::t -> 
+      if (i <= 0) && (j > 0) then a::slice t (i-1) (j-1) 
+      else slice t (i-1) (j-1);;
+
+(*Q5*)
 
